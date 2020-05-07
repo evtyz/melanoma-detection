@@ -9,7 +9,7 @@ def Downsize_Image(ImageFilePath):
     image = Image.open(ImageFilePath, 'r')
     image_size = image.size[0]
     
-    DOWNSAMPLE_SIZE = 672
+    DOWNSAMPLE_SIZE = 224
 
     if image_size > DOWNSAMPLE_SIZE:
         image = image.resize((DOWNSAMPLE_SIZE, DOWNSAMPLE_SIZE), resample=Image.LANCZOS)
@@ -18,7 +18,7 @@ def Downsize_Image(ImageFilePath):
     else:
         print("Image already downsampled enough!")
 
-ROOT = "D:/Internet Downloads/ISIC-images/"
+ROOT = "D:/isic-image-database/"
 
 pathList = pathlib.Path(ROOT).glob("*/*/*.jpg")
 
