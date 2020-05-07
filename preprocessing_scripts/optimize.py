@@ -8,7 +8,7 @@ def Optimize_Image(ImageFilePath):
     image = Image.open(ImageFilePath)
     image.save(ImageFilePath, optimize=True)
 
-ROOT = "D:/Internet Downloads/ISIC-images/"
+ROOT = "D:/isic-image-database/"
 
 pathList = pathlib.Path(ROOT).glob("*/*/*.jpg")
 
